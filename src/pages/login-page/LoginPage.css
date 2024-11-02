@@ -1,0 +1,83 @@
+/* Container için arka plan ve ortalama */
+.lg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #242337, #0D4552);
+}
+
+/* Login page kart stili */
+.login-page {
+    width: 350px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Başlık */
+.lg-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0D4552;
+    margin-bottom: 20px;
+}
+
+/* Input alanları için tasarım */
+.lg-input-field {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.lg-input-field:focus {
+    border-color: #0D4552;
+    outline: none;
+}
+
+/* Boş bırakılamayacak alanlar için hata stili */
+.lg-input-error {
+    border-color: red;
+}
+
+/* Hata mesajı */
+.lg-error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Button konteyner */
+.lg-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Button stili */
+.lg-button-field {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #242337;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lg-button-field:hover {
+    background-color: #0D4552;
+}
