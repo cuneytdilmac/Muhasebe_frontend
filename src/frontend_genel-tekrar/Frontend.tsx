@@ -28,11 +28,10 @@ const Frontend: React.FC = () => {
 
   return (
     <div className="fe-container">
-      <Frontend1/>
       <h1 className="fe-title">React ve TypeScript ile Frontend Kavramları</h1>
 
       <div className="fe-card-container">
-        
+
         {/* 1. TypeScript, JavaScript, React ve Angular Nedir? */}
         <div className="fe-card">
           <h2>1. TypeScript, JavaScript, React ve Angular Nedir?</h2>
