@@ -40,10 +40,6 @@ export const NetflixUsers = () => {
 
     const users: User[] = [a, b, c, a, b, c, b, a,];
 
-    const arabalar: string[] = ["mercedes", "volvo", "renult", "passat", "şahin"];
-
-    const kuşlar: string[] = ["keklik", "güvercin", "kartal", "papağan"];
-
     return (
         <div>
             <div style={{
@@ -96,31 +92,6 @@ export const NetflixUsers = () => {
                     })
                     : <p style={{ color: "red" }}>Kullanıcılar Gösterilemiyor!</p>
             }
-
-
-
-            {
-                /*
-            <p>mersedes</p>
-            <p>volvo</p>
-            <p>renult</p>
-            <p>passat</p>
-                */
-            }
-
-
-            {
-                arabalar.map((araba: string) => {
-                    return <p>{araba}</p>
-                })
-            }
-
-            {
-                kuşlar.map((kuş: string) => {
-                    return <button style={{ backgroundColor: "blue" }}>{kuş}</button>
-                })
-            }
-
         </div>
     )
 }
