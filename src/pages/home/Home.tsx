@@ -11,6 +11,8 @@ export const Home = () => {
     const numberOfOffers = useSelector((state: RootState) => state.offers.numberOfOffers);
     const numberOfClients = useSelector((state: RootState) => state.clients.numberOfClients);
     const numberOfLogs = useSelector((state: RootState) => state.logs.numberOfLogs);
+    console.log("git test1");
+    console.log("git test2");
 
     useEffect(() => {
         setTimeout(() => getNumberOfOffersAction(dispatch), 1000) // Burda dataları 1 saniye beklettik
