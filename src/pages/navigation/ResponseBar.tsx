@@ -110,7 +110,16 @@ export const ResponseBar = () => {
         height: 80,
         borderRadius: 16
 
-      }} src={logo} alt="Cüneyt Logo" />} />
+      }} src={logo} alt="Cüneyt Logo" />}
+        end={
+          <button style={{
+            width: 50,
+            height: 50,
+            borderRadius: "100%",
+            backgroundColor: "#155B63",
+          }}>C</button>
+        }
+      />
     </div>
   )
 }
