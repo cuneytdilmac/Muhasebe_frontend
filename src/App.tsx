@@ -1,15 +1,15 @@
 import './App.css';
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/saga-blue/theme.css'; // Tema stili
-import 'primereact/resources/primereact.min.css';          // PrimeReact bileşen stili
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';  
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { indigo, yellow } from '@mui/material/colors';
 import { ResponseBar } from './pages/navigation/ResponseBar';
 import AppRouter from './AppRouter';
 import LoginPage from './pages/login-page/LoginPage';
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Yönlendirme için
+import { useNavigate } from 'react-router-dom'; 
 
 const theme = createTheme({
   palette: {
@@ -32,9 +32,13 @@ function App() {
 
   useEffect(() => {
     // Oturum durumu değiştiğinde localStorage'a kaydet
-    localStorage.setItem('isAuthenticated', JSON.stringify(isAuthenticated));
+    if (isAuthenticated) {
+      localStorage.setItem('isAuthenticated', JSON.stringify(isAuthenticated));
+    } else {
+      localStorage.removeItem('isAuthenticated'); // Oturum kapalıysa localStorage'ı temizle
+    }
 
-    // Eğer oturum açıldıysa, 10 saniye sonra tekrar login sayfasına yönlendir
+    // Eğer oturum açıldıysa, 1 saat sonra tekrar login sayfasına yönlendir
     if (isAuthenticated) {
       const timeoutId = setTimeout(() => {
         setIsAuthenticated(false); // Oturum durumunu kapat
@@ -54,7 +58,7 @@ function App() {
           <LoginPage onLogin={() => setIsAuthenticated(true)} />
         ) : (
           <>
-            <ResponseBar />
+            <ResponseBar onLogout={() => setIsAuthenticated(false)} />
             <AppRouter isAuthenticated={isAuthenticated} />
           </>
         )}
